@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import './App.css';
+import AlternativeAnswer from './AlternativeAnswer';
 
 function App() {
   const [base64Image, setBase64Image] = useState('');
@@ -43,7 +44,7 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={base64Image} className="App-logo" alt="Fetched from JSON" />
+        <img src="/assets/deneme.jpeg" className="App-logo" alt="Fetched from JSON" />
         <p>
           Edit <code>src/App.js</code> and save to reload.
         </p>
@@ -64,6 +65,11 @@ function App() {
       ) : (
         <p>Loading...</p>
       )}
+
+      <hr />
+
+      <AlternativeAnswer />
+
     </div>
   );
 }
